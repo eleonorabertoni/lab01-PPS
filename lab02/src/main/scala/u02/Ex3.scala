@@ -1,6 +1,6 @@
 package u02
 
-object Ex3 extends App {
+object Ex3 extends App :
 
   def parityMethodSyntax(n: Int): String = n % 2 match
     case 0 => "even"
@@ -19,4 +19,3 @@ object Ex3 extends App {
   def negGeneric[X](f : X => Boolean): X => Boolean =
     !f(_)
 
-}

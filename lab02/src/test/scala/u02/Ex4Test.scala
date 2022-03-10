@@ -18,6 +18,6 @@ class Ex4Test :
     assertFalse(p3(1)(3)(2))
 
   @Test def testUncurriedDef(): Unit =
-    assertTrue(p4(1,2,3))
-    assertFalse(p4(1,3,2))
+    assertTrue(p4(1, 2, 3))
+    assertFalse(p4(1, 3, 2))
 

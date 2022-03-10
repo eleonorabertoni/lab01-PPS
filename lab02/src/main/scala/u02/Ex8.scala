@@ -1,6 +1,6 @@
 package u02
 
-object Ex8 extends App{
+object Ex8 extends App :
   enum Option[A]:
     case Some(a:A)
     case None()
@@ -27,11 +27,9 @@ object Ex8 extends App{
     def map[A,B](opt: Option[A])(f: A => Boolean): Option[Boolean] = opt match
       case Option.Some(a) => Option.Some(f(a))
       case _ => None()
-    
+
     def map2[A,B,C](opt1: Option[A])(opt2: Option[B]): Option[(A,B)] = (opt1, opt2) match
       case (Option.Some(a),Option.Some(b)) => Option.Some(a,b)
       case _ => Option.None()
 
-
-}
 

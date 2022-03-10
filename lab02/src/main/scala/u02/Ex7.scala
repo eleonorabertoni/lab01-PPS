@@ -2,7 +2,7 @@ package u02
 import scala.math.Pi
 import scala.math.pow
 
-object Ex7 extends App{
+object Ex7 extends App :
   enum Shape:
     case Rectangle(base: Double, height: Double)
     case Circle(radius: Double)
@@ -18,5 +18,3 @@ object Ex7 extends App{
     case Shape.Circle(radius) => pow(radius, 2) * Pi
     case Shape.Square(side) => pow(side, 2)
 
-
-}

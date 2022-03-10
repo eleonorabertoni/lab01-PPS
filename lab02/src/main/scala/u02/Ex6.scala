@@ -2,7 +2,7 @@ package u02
 
 import scala.annotation.tailrec
 
-object Ex6 extends App{
+object Ex6 extends App :
 
   def fib(num: Int): Int =
     @annotation.tailrec
@@ -11,4 +11,3 @@ object Ex6 extends App{
       case 1 => acc2
       case _ => _tail(n - 1, acc2, acc1 + acc2)
     _tail(num, 0, 1)
-}
