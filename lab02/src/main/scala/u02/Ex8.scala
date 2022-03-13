@@ -19,9 +19,7 @@ object Ex8 extends App :
       case _ => None()
 
     def filter[A, B](opt: Option[A])(f: A => Boolean): Option[A] = opt match
-      case Option.Some(a: A) => f(a) match
-        case true => Option.Some(a)
-        case _ => None()
+      case Option.Some(a) if f(a) => Option.Some(a)
       case _ => None()
 
     def map[A,B](opt: Option[A])(f: A => Boolean): Option[Boolean] = opt match
