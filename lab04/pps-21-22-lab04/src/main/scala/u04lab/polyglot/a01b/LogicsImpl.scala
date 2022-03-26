@@ -21,9 +21,9 @@ class LogicsImpl(private val size: Int, private val mines: Int) extends Logics:
   print(minesList)
 
   @tailrec
-  private def minesSetup(nElements: Int, list: List[(Int, Int)]): List[(Int, Int)] = (length(list), random.nextInt(size), random.nextInt(size)) match
-    case (l, _, _) if l == mines => list
-    case (l, a, b) if !contains(list, (a, b)) => minesSetup(nElements-1, Cons((a,b), list))
+  private def minesSetup(nElements: Int, list: List[(Int, Int)]): List[(Int, Int)] = (random.nextInt(size), random.nextInt(size)) match
+    case (_, _) if length(list) == mines => list
+    case (a, b) if !contains(list, (a, b)) => minesSetup(nElements-1, Cons((a,b), list))
     case _ => minesSetup(nElements, list)
 
   private def neighbours(x: Int, y: Int): Int =
